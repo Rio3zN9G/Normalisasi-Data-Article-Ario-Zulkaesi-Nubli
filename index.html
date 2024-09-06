@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normalisasi Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Normalisasi Data</h1>
+        <nav>
+            <ul>
+                <li><a href="#pengantar">Pengantar</a></li>
+                <li><a href="#jenis">Jenis-Jenis Normalisasi</a></li>
+                <li><a href="#tujuan">Tujuan Normalisasi</a></li>
+                <li><a href="#contoh">Contoh Interaktif</a></li>
+                <li><a href="#kesimpulan">Kesimpulan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="pengantar" class="content">
+        <h2>Pengenalan Normalisasi</h2>
+        <p>Normalisasi data adalah proses pengorganisasian data dalam basis data untuk mengurangi duplikasi dan memastikan integritas data.</p>
+    </section>
+
+    <section id="jenis" class="accordion-section">
+        <h2>Jenis-Jenis Normalisasi</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">First Normal Form (1NF)</button>
+                <div class="accordion-content">
+                    <p>Setiap kolom dalam tabel harus berisi nilai atomik (tidak dapat dibagi lagi), dan setiap record harus unik.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Second Normal Form (2NF)</button>
+                <div class="accordion-content">
+                    <p>Memenuhi syarat 1NF, dan setiap atribut non-kunci harus sepenuhnya bergantung pada kunci utama.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Third Normal Form (3NF)</button>
+                <div class="accordion-content">
+                    <p>Memenuhi syarat 2NF, dan semua atribut non-kunci tidak boleh bergantung pada atribut non-kunci lainnya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tujuan" class="content">
+        <h2>Tujuan Normalisasi</h2>
+        <ul>
+            <li>Mengurangi redundansi data</li>
+            <li>Meminimalkan inkonsistensi data</li>
+            <li>Memastikan integritas data</li>
+            <li>Memudahkan pemeliharaan basis data</li>
+        </ul>
+    </section>
+
+    <section id="contoh" class="content">
+        <h2>Contoh Interaktif Normalisasi</h2>
+        <div class="table-container">
+            <h3>Sebelum Normalisasi</h3>
+            <table class="before-normalization">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama</th>
+                        <th>Kursus</th>
+                        <th>Instruktur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Arya</td>
+                        <td>Matematika</td>
+                        <td>Pak Budi</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Arya</td>
+                        <td>Fisika</td>
+                        <td>Pak Andi</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Setelah Normalisasi (1NF)</h3>
+            <table class="after-normalization">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama</th>
+                        <th>Kursus</th>
+                        <th>Instruktur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Arya</td>
+                        <td>Matematika</td>
+                        <td>Pak Budi</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Arya</td>
+                        <td>Fisika</td>
+                        <td>Pak Andi</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="kesimpulan" class="content">
+        <h2>Kesimpulan</h2>
+        <p>Proses normalisasi membantu memastikan basis data lebih efisien, mudah diperbarui, dan lebih handal dalam menangani transaksi data.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ario Zulkaesi normalisasi</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
